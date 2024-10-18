@@ -1,155 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Authentication</title>
-<style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0; /* Light background for better contrast */
-        font-family: Arial, sans-serif;
-    }
-
-    .wrapper {
-        width: 100%; /* Allows the div to be wider */
-        max-width: 500px; /* Increased max width */
-        background-color: #333;
-        color: #fff;
-        border-radius: 10px;
-        padding: 30px 20px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        box-sizing: border-box; /* Ensures padding is included in width calculation */
-    }
-
-    .wrapper h1 {
-        font-size: 28px; /* Corrected the typo in font size */
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .input-box {
-        width: 100%; /* Ensures the input box scales with the wrapper */
-        margin: 20px 0;
-        position: relative;
-    }
-
-    .input-box input {
-        width: 100%; /* Input fields take the full width of the parent */
-        height: 45px; /* Set a fixed height for consistency */
-        background: transparent;
-        border: none;
-        outline: none;
-        border: 2px solid #fff;
-        border-radius: 25px;
-        font-size: 16px;
-        color: #fff;
-        padding: 0 20px;
-        transition: border 0.3s;
-        box-sizing: border-box; /* Prevents overflow by including padding in width */
-    }
-
-    .input-box input:focus {
-        border: 2px solid #007bff; /* Focus state color */
-    }
-
-    .input-box input::placeholder {
-        color: #ccc;
-    }
-
-    .wrapper .remember-forget {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        margin: -10px 0 15px;
-    }
-
-    .remember-forget label input {
-        accent-color: #007bff; /* Updated checkbox color */
-        margin-right: 5px;
-    }
-
-    .remember-forget a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    .remember-forget a:hover {
-        text-decoration: underline;
-    }
-
-    .wrapper .btn {
-        width: 100%;
-        height: 45px;
-        background: #007bff;
-        border: none;
-        outline: none;
-        border-radius: 25px;
-        cursor: pointer;
-        color: #fff;
-        font-weight: 600;
-        transition: background 0.3s;
-    }
-
-    .wrapper .btn:hover {
-        background: #0056b3; /* Darker shade on hover */
-    }
-
-    .register-link {
-        text-align: center;
-        font-size: 14px;
-        margin-top: 20px;
-    }
-
-    .register-link p a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: 600;
-    }
-
-    .register-link p a:hover {
-        text-decoration: underline;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 480px) {
-        .wrapper {
-            padding: 20px 15px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Sundar Pichai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
         }
 
-        .input-box {
-            margin: 15px 0;
+        .container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
         }
 
-        .wrapper h1 {
-            font-size: 24px;
+        .container h1 {
+            color: #007bff;
+            margin-bottom: 20px;
         }
-    }
-</style>
+
+        .image-container {
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            border: 4px solid #007bff;
+        }
+
+        .bio {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .achievements {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .achievements h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .achievements ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .achievements li {
+            margin: 10px 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div class="wrapper">
-        <form>
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" required>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Password" required>
-            </div>
-            <div class="remember-forget">
-                <label><input type="checkbox"> Remember me</label>
-                <a href="#">Forgot password?</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <div class="register-link">
-                <p>Don't have an account? <a href="#">Create an account</a></p>
-            </div>
-        </form>
+    <div class="container">
+        <h1>Tribute to Sundar Pichai</h1>
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sundar_pichai.png/800px-Sundar_pichai.png" alt="Sundar Pichai">
+        </div>
+        <div class="bio">
+            <p>Sundar Pichai is an Indian-American business executive who currently serves as the CEO of Alphabet Inc. and its subsidiary Google LLC. Born in Madurai, India, he is widely recognized for his contributions to the development and growth of Google's key products like Google Chrome, Chrome OS, and Android.</p>
+        </div>
+        <div class="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Led the development of the Google Chrome browser, which became the most popular web browser globally.</li>
+                <li>Played a significant role in the creation and growth of the Android operating system.</li>
+                <li>Promoted to CEO of Google in 2015 and later CEO of Alphabet Inc. in 2019.</li>
+                <li>Recognized for his visionary leadership and focus on innovation and sustainability.</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p>Learn more about Sundar Pichai on his <a href="https://en.wikipedia.org/wiki/Sundar_Pichai" target="_blank">Wikipedia page</a>.</p>
+        </div>
     </div>
 </body>
 </html>
